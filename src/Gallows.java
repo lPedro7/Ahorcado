@@ -10,12 +10,68 @@ public abstract class Gallows {
     }
 
     boolean isHung() {
-        return pointsLeft < 0;
+        return pointsLeft <= 0;
     }
 }
 
 
 class TextGallows extends Gallows {
-    void display() {
+    void display(){
+        switch (this.pointsLeft){
+            case 0:
+                System.out.println("   |-----| ");
+                System.out.println("   |     | ");
+                System.out.println("   |     o ");
+                System.out.println("   |    /|\\");
+                System.out.println("   |     | ");
+                System.out.println("   |    / \\ ");
+                System.out.println("   | ");
+                break;
+            case 1:
+                System.out.println("   |-----| ");
+                System.out.println("   |     | ");
+                System.out.println("   |     o ");
+                System.out.println("   |    /|\\");
+                System.out.println("   |     | ");
+                System.out.println("   |       ");
+                System.out.println("   | ");
+                break;
+            case 2:
+                System.out.println("   |-----| ");
+                System.out.println("   |     | ");
+                System.out.println("   |     o ");
+                System.out.println("   |    /|\\");
+                System.out.println("   |        ");
+                System.out.println("   |        ");
+                System.out.println("   | ");
+                break;
+            case 3:
+                System.out.println("   |-----| ");
+                System.out.println("   |     | ");
+                System.out.println("   |     o ");
+                System.out.println("   |       ");
+                System.out.println("   |        ");
+                System.out.println("   |        ");
+                System.out.println("   | ");
+                break;
+            case 4:
+                System.out.println("   |-----| ");
+                System.out.println("   |     | ");
+                System.out.println("   |       ");
+                System.out.println("   |       ");
+                System.out.println("   |       ");
+                System.out.println("   |       ");
+                System.out.println("   | ");
+                break;
+            case 5:
+                System.out.println("   |-----| ");
+                System.out.println("   |     ");
+                System.out.println("   |     ");
+                System.out.println("   |    ");
+                System.out.println("   |        ");
+                System.out.println("   |        ");
+                System.out.println("   | ");
+                break;
+        }
     }
 }

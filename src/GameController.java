@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GameController {
 
     AlphabetDisplay ad;
@@ -16,10 +18,31 @@ public class GameController {
             this.g.display();
             this.wd.display(w);
             this.ad.display(a);
+
+            char c = getInput();
+
+            if(!w.doGuess(c)){
+                g.addPart();
+            }
+        }
+
+        g.display();
+        System.out.println(w.toString());
+
+        if (w.isGuessed()){
+            System.out.println("HAS GUANYAT !");
+        }else{
+            System.out.println("GAME OVER");
         }
     }
 
     private char getInput() {
-        return 0;
+
+       Scanner s = new Scanner(System.in);
+        System.out.println("Lletra? ");
+        return s.next().toLowerCase().charAt(0);
+
+
+
     }
 }

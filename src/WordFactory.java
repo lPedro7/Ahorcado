@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public interface WordFactory {
     Word makeWord();
 }
@@ -13,6 +15,8 @@ class DefaultWordFactory implements WordFactory {
 class DictWordFactory implements WordFactory {
     @Override
     public Word makeWord() {
-        return null;
+        String[] words = new String[]{"ORDINADOR", "ESCOLA", "LICEU", "FOLI", "ROTULADOR", "PISSARRA"};
+        Random r = new Random();
+        return new Word(words[r.nextInt(words.length)]);
     }
 }
