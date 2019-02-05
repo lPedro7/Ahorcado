@@ -11,8 +11,11 @@ public class GameController {
     }
 
     void playGame(Word w) {
+        Alphabet a = new Alphabet();
         while(!this.g.isHung() && !w.isGuessed()){
-            
+            this.g.display();
+            this.wd.display(w);
+            this.ad.display(a);
         }
     }
 
